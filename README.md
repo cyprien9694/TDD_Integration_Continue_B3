@@ -37,6 +37,7 @@ Avant d'installer le projet, assure-toi de disposer des outils suivants :
 ```bash
 git clone https://github.com/TON_USERNAME/student-api-php.git
 cd student-api-php
+```
 
 2. Installer les dépendances
 composer install
