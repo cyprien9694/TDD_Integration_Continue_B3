@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ruleset name="SimpleTPStandard">
+    <description>Configuration simple pour le TP</description>
+
+    <!-- Utiliser PSR-12 comme base -->
+    <rule ref="PSR12">
+        <!-- Ignorer la longueur maximale des lignes -->
+        <exclude name="Generic.Files.LineLength.TooLong"/>
+        <!-- Ignorer l'obligation de docstrings sur les classes et méthodes -->
+        <exclude name="Generic.Commenting.DocComment.Missing"/>
+    </rule>
+
+    <!-- Dossiers à analyser -->
+    <file>src</file>
+    <file>tests</file>
+</ruleset>
