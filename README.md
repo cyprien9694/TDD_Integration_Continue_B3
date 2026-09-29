@@ -1,94 +1,72 @@
-# Student API - PHP (TDD & Continuous Integration)
+# Student API - PHP (TDD & Intégration Continue)
 
-Projet de gestion d'étudiants développé dans le cadre du cursus **B3 IT – École Hexagone**.
-
-Ce projet met en œuvre une démarche de **Test-Driven Development (TDD)**, des tests unitaires avec **PHPUnit**, ainsi qu'un contrôle de la qualité du code avec **PHP_CodeSniffer**.
+Projet de gestion d'étudiants développé dans le cadre du cursus B3 IT (École Hexagone). Il met en œuvre une démarche de **Test-Driven Development (TDD)**, des tests unitaires avec **PHPUnit** et un contrôle qualité du code via **PHP_CodeSniffer**.
 
 ## 🚀 Fonctionnalités
 
-- **Gestion des étudiants**
-  - Ajout d'un étudiant
-  - Modification d'un étudiant
-  - Suppression d'un étudiant
-  - Recherche d'un étudiant
-  - Récupération de la liste des étudiants
-  - Récupération d'un étudiant par son identifiant
-
-- **Statistiques**
-  - Calcul de différentes statistiques concernant les étudiants
-
-- **Validation des données**
-  - Vérification des champs obligatoires
-  - Validation des notes
-  - Contrôle des données saisies
+- **Gestion des étudiants** : ajout, modification, suppression, recherche et récupération (liste complète ou par ID)
+- **Statistiques** : calculs et métriques sur les étudiants
+- **Validation des données** : vérification des champs obligatoires et des notes valides
 
 ## 📋 Prérequis
 
-Avant d'installer le projet, assure-toi de disposer des outils suivants :
-
-- **PHP 8.1** ou supérieur
+- **PHP** 8.1 ou supérieur
 - **Composer**
-- **Git**
 
 ## ⚙️ Installation
 
-### 1. Cloner le dépôt
+1. Cloner le dépôt :
+
+   ```bash
+   git clone https://github.com/cyprien9694/student-api-php.git
+   cd student-api-php
+   ```
+
+2. Installer les dépendances :
+
+   ```bash
+   composer install
+   ```
+
+## 🧪 Tests et qualité du code
+
+Lancer les tests unitaires (PHPUnit) :
 
 ```bash
-git clone https://github.com/TON_USERNAME/student-api-php.git
-cd student-api-php
+composer test
 ```
 
-2. Installer les dépendances
-composer install
+Vérifier le style du code (PHPCS) :
 
-🧪 Tests
-Le projet utilise PHPUnit pour effectuer les tests unitaires.
-
-Pour lancer l'ensemble des tests :
-
-composer test
-
-Tu peux également lancer PHPUnit directement :
-
-vendor/bin/phpunit
-
-🔍 Qualité du code
-Le projet utilise PHP_CodeSniffer (PHPCS) afin de vérifier le respect des standards de codage.
-
-Pour lancer le linter :
-
+```bash
 composer lint
+```
 
-Pour corriger automatiquement certaines erreurs de style :
+Corriger automatiquement les erreurs de style (PHPCBF) :
 
+```bash
 vendor/bin/phpcbf
+```
 
-🛠️ Structure du projet
+## 🛠️ Structure du projet
+
+```text
 student-api-php/
 ├── src/
 │   └── StudentManager.php   # Logique métier et gestion des étudiants
 ├── tests/
 │   └── StudentTest.php      # Tests unitaires PHPUnit
-├── composer.json             # Dépendances et scripts Composer
-├── phpcs.xml                 # Configuration de PHP_CodeSniffer
-├── README.md                 # Documentation du projet
-└── LICENSE                   # Licence du projet
+├── composer.json            # Dépendances et scripts du projet
+├── phpcs.xml                # Configuration du linter PHPCS
+├── LICENSE                  # Licence MIT
+└── README.md                # Documentation du projet
+```
 
-🔄 TDD & Continuous Integration
-Le développement du projet suit une approche TDD (Test-Driven Development) :
+## 👤 Auteur
 
-Écriture d'un test correspondant au comportement attendu.
+**Cyprien** — étudiant en développement web et mobile, École Hexagone
+GitHub : [@cyprien9694](https://github.com/cyprien9694)
 
-Implémentation du code nécessaire pour faire passer le test.
+## 📄 Licence
 
-Amélioration et refactorisation du code.
-
-Vérification de la qualité du code avec PHP_CodeSniffer.
-
-Les tests et les vérifications de qualité peuvent être intégrés dans une chaîne de Continuous Integration (CI) afin de détecter automatiquement les régressions et les problèmes de style.
-
-📄 Licence
-Ce projet est distribué sous licence MIT.
-
-Voir le fichier LICENSE pour plus d'informations.
+Ce projet est distribué sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
