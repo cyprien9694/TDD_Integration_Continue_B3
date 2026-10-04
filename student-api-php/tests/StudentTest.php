@@ -16,7 +16,7 @@ class StudentTest extends TestCase
     {
         $students = StudentManager::getAll();
         $this->assertIsArray($students);
-        $this->assertCount(5, $students);
+        $this->assertCount(6, $students);
     }
 
     public function testGetStudentByIdValid()
